@@ -1,2 +1,2 @@
 # simple-chatbot-flask
-implementation through oai 
+Chatbot Implementation with OpenAI GPT-4o

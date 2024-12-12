@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+IMAGE_NAME="simple-chatbot-app"
+TAG=${1:-latest}
+
+echo "Building Docker image..."
+docker build -t $IMAGE_NAME:$TAG .
+
+echo "Pushing Docker image to Docker Hub..."
+docker tag $IMAGE_NAME:$TAG username/$IMAGE_NAME:$TAG
+docker push username/$IMAGE_NAME:$TAG
